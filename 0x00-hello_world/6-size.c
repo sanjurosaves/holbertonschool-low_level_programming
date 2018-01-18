@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-/* function to return sizes of variable types */
+/**
+ * main - returns sizes of variable types
+ * Return: 0 if no error
+ */
 int main(void)
 {
 	int i;
@@ -15,5 +18,5 @@ int main(void)
 	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(ll));
 	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
 
-	return 0;
+	return (0);
 }
