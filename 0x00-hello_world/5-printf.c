@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* This main function prints the second half of the sentence. */
+/**
+ * main - prints second
+ * half of the sentence.
+ * Return: 0 if no error
+*/
 int main (void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
