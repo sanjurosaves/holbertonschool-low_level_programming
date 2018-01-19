@@ -1,7 +1,7 @@
 #include <unistd.h>
 
 /**
- * main - prints string w/o printf, etc.
+ * main - prints string w/o certainfuncs, etc.
  * Return: 1
  */
 int main(void)
