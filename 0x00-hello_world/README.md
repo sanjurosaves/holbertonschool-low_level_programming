@@ -1,3 +1,5 @@
+```
+```
 0-preprocessor // runs C file through preprocessor and saves result to file c
 1-compiler     // compiles C file but does not link
 2-assembler    // generates assembly code of C code and saves to output file
