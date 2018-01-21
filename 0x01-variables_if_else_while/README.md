@@ -12,3 +12,6 @@ File Name | Task Description
 8-print_base16.c | prints all the numbers of base 16 in lowercase
 9-print_comb.c | prints all possible combinations of single-digit numbers
 10-print_comb2.c | prints the numbers from 00 to 99
+100-print_comb3.c | prints all possible combinations of two digits
+101-print_comb4.c | prints all possible combinations of three digits
+102-print_comb5.c | prints all possible combinations of two two-digit numbers
