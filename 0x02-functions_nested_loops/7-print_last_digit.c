@@ -1,7 +1,5 @@
 #include "holberton.h"
 
-int _putchar(char c);
-
 /**
  * print_last_digit - prints last digit of number
  * @num: number to determine last digit of
