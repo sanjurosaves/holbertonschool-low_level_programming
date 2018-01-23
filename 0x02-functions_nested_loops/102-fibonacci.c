@@ -15,7 +15,7 @@ int main(void)
 	fib2 = 2;
 
 	printf("%.0f, ", fib1);
-	printf("%.0f, ", fib2);
+	printf("%.0f, \n", fib2);
 
 	for (i = 2; i < 49; ++i)
 	{
