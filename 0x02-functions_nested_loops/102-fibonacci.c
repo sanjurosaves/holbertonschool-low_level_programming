@@ -15,12 +15,12 @@ int main(void)
 	fib2 = 2;
 
 	printf("%.0f, ", fib1);
-	printf("%.0f, \n", fib2);
+	printf("%.0f,\n", fib2);
 
-	for (i = 2; i < 49; ++i)
+	for (i = 2; i < 50; ++i)
 	{
 		fibCurrent = fib1 + fib2;
-		if (i < 48)
+		if (i < 49)
 			printf("%.0f, ", fibCurrent);
 		else
 			printf("%.0f\n", fibCurrent);
