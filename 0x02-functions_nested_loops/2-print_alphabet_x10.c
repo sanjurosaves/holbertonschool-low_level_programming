@@ -1,7 +1,5 @@
 #include "holberton.h"
 
-int _putchar(char c);
-
 /**
  * print_alphabet_x10 - prints a thru z
  * Return: 0 if no error
