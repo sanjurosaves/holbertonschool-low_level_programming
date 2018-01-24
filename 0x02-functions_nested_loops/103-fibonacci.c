@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - generates first 50 Fibonacci nums
@@ -6,27 +7,27 @@
  */
 int main(void)
 {
-	float fib1;
-	float fib2;
-	float fibCurrent;
+	unsigned long fib1;
+	unsigned long fib2;
+	unsigned long fibCurrent;
+	unsigned long sum;
 	int i;
 
 	fib1 = 1;
 	fib2 = 2;
+	sum = fib2;
 
-	printf("%.0f, ", fib1);
-	printf("%.0f, ", fib2);
-
-	for (i = 2; i < 50; ++i)
+	for (i = 2; i < 32; ++i)
 	{
 		fibCurrent = fib1 + fib2;
-		if (i < 49)
-			printf("%.0f, ", fibCurrent);
-		else
-			printf("%.0f\n", fibCurrent);
+
+		if (fibCurrent % 2 == 0)
+			sum += fibCurrent;
 		fib1 = fib2;
 		fib2 = fibCurrent;
 	}
+
+	printf("%lu\n", sum);
 
 	return (0);
 }
