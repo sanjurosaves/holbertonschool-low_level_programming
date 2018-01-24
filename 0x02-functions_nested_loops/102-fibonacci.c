@@ -6,24 +6,24 @@
  */
 int main(void)
 {
-	float fib1;
-	float fib2;
-	float fibCurrent;
+	unsigned long fib1;
+	unsigned long fib2;
+	unsigned long fibCurrent;
 	int i;
 
 	fib1 = 1;
 	fib2 = 2;
 
-	printf("%.0f, ", fib1);
-	printf("%.0f,\n", fib2);
+	printf("%lu, ", fib1);
+	printf("%lu, ", fib2);
 
 	for (i = 2; i < 50; ++i)
 	{
 		fibCurrent = fib1 + fib2;
 		if (i < 49)
-			printf("%.0f, ", fibCurrent);
+			printf("%lu, ", fibCurrent);
 		else
-			printf("%.0f\n", fibCurrent);
+			printf("%lu\n", fibCurrent);
 		fib1 = fib2;
 		fib2 = fibCurrent;
 	}
