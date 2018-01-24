@@ -8,42 +8,39 @@ int _putchar(char c);
  */
 void times_table(void)
 {
-	int adder;
+	int i;
+	int j;
 	int temp;
-	int innerIter;
 
-	for (adder = 0; adder < 10; adder++)
+	for (i = 0; i < 10; i++)
 	{
-		temp = adder;
+		temp = i;
 		_putchar('0');
 		_putchar(',');
 
-		for (innerIter = 0; innerIter < 9; innerIter++)
+		for (j = 0; j < 9; j++)
 		{
-			if (innerIter == 0)
-				;
-			else
-				adder = adder + temp;
+			if (j != 0)
+				i = i + temp;
 
-			if (adder < 10)
+			_putchar(' ');
+
+			if (i < 10)
 			{
 				_putchar(' ');
-				_putchar(' ');
-				_putchar(adder + '0');
-				if (innerIter < 8)
-					_putchar(',');
+				_putchar(i + '0');
 			}
 			else
 			{
-				_putchar(' ');
-				_putchar((adder / 10) + '0');
-				_putchar((adder % 10) + '0');
-				if (innerIter < 8)
-					_putchar(',');
+				_putchar((i / 10) + '0');
+				_putchar((i % 10) + '0');
 			}
+
+			if (j < 8)
+				_putchar(',');
 		}
 
 		_putchar('\n');
-		adder = temp;
+		i = temp;
 	}
 }
