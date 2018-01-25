@@ -11,5 +11,5 @@ void print_most_numbers(void)
 	for (i = 0; i < 10; i++)
 		_putchar((i != 2 && i != 4) ? i + '0' : 30);
 
-	_putchar('n');
+	_putchar('\n');
 }
