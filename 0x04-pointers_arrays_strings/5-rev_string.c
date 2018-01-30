@@ -23,4 +23,6 @@ void rev_string(char *s)
 	for (j = 0; k > 0; k--, j++)
 		s[j] = tmp[j];
 
+	s[j + 1] = '\0';
+
 }
