@@ -17,10 +17,11 @@ void puts2(char *str)
 
 	i = 0;
 
-	do {
+	while (i <= c)
+	{
 		_putchar(str[i]);
-		i = i + 2;
-	} while (i < c);
+		i += 2;
+	}
 
 	_putchar('\n');
 
