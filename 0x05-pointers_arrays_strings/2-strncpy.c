@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdio.h>
+
 
 /**
  * _strncpy - concatenates two strings
@@ -10,9 +12,23 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
+	unsigned int dlen, slen;
 	unsigned short int end = 0;
 
-	for (i = 0; end != 1 && n > 0; i++)
+	for (i = 1; dest[i] != '\0'; i++)
+		;
+
+	dlen = i;
+
+	for (i = 1; src[i] != '\0'; i++)
+		;
+
+	slen = i;
+
+	if (dlen < slen)
+		return (NULL);
+
+	for (i = 0; end != 1 && n >= 0; i++)
 	{
 		dest[i] = src[i];
 		if (src[i] == '\0' || src[i + 1] == src[n])
