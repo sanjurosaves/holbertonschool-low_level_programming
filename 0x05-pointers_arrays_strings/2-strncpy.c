@@ -12,21 +12,7 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
-	unsigned int dlen, slen;
 	unsigned short int end = 0;
-
-	for (i = 1; dest[i] != '\0'; i++)
-		;
-
-	dlen = i;
-
-	for (i = 1; src[i] != '\0'; i++)
-		;
-
-	slen = i;
-
-	if (dlen < slen)
-		return (NULL);
 
 	for (i = 0; end != 1 && n >= 0; i++)
 	{
