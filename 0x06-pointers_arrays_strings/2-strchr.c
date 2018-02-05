@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 			return (p);
 		}
 		i++;
-	} while (s[i] != '\0');
+	} while (s[i] != '\0' || c == '\0');
 
 		return (0);
 }
