@@ -13,7 +13,7 @@ void print_diagsums(int *a, int size)
 	int sum = a[0];
 
 	if (size == 1)
-		printf("1, 1");
+		printf("%d, %d\n", a[0], a[0]);
 	else if (size == 0)
 		;
 	else
