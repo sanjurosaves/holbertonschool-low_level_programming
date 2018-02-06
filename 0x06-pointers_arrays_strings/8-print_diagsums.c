@@ -10,7 +10,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int sum = a[0];
+	int sum = 0;
 
 	if (size == 1)
 		printf("%d, %d\n", a[0], a[0]);
@@ -25,7 +25,7 @@ void print_diagsums(int *a, int size)
 
 		sum = 0;
 
-		for (i = (size * (size - 1)); i >= 0; i -= (size - 1))
+		for (i = (size * (size - 1)); i > 0; i -= (size - 1))
 			sum += a[i];
 
 		printf("%d\n", sum);
