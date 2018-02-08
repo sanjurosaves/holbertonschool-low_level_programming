@@ -24,15 +24,16 @@ int _strlen_recursion(char *s)
  */
 int compare(char *s, int start, int end)
 {
-	if (start == end)
+	if (start > end)
 		return (1);
+	else
+	{
+		if (s[start] != s[end])
+			return (0);
 
-	if (s[start] != s[end])
-		return (0);
-
-	if (*s < end + 1)
-		return (compare(s, start + 1, end - 1));
-
+		else if (s[start] != s[end])
+			return (compare(s, start++, end--));
+	}
 	return (1);
 }
 
