@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _strlen_recursion - returns the length of string
@@ -26,15 +27,15 @@ int compare(char *s, int start, int end)
 {
 	if (start > end)
 		return (1);
-	else
-	{
-		if (s[start] != s[end])
-			return (0);
 
-		else if (s[start] != s[end])
-			return (compare(s, start++, end--));
-	}
-	return (1);
+	if (s[start] != s[end])
+		return (0);
+
+	printf("Start: %d End %d", start, end);
+	getchar();
+
+	return (compare(s, ++start, --end));
+
 }
 
 /**
