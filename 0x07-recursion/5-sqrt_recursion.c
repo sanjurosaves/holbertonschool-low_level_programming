@@ -1,42 +1,19 @@
 #include "holberton.h"
 
 /**
- * _abs - calculates and returns absolute value
+ * squareroot - finds square root of perfect square
+ * @s: potentialnatural  square root
  * @n: number
- * Return: n
+ * Return: natural square root or -1
  */
-float _abs(float n)
+int squareroot(int n, int s)
 {
-	if (n < 0)
-		n = -n;
+	if (s * s == n)
+		return (s);
+	else if (s * s > n)
+		return (-1);
 
-	return (n);
-}
-
-/**
- * squareroot - finds squareroot of a number
- * @x: number
- * Return: guess once epsilon threshold is met
- */
-float squareroot(float x)
-{
-	const float epsilon = .1;
-	static float guess;
-
-	if (guess == 0)
-		guess = 1.0;
-	else
-	{
-		if (_abs(guess * guess - x) >= epsilon)
-			guess = (x / guess + guess) / 2.0;
-
-	}
-
-
-	if (_abs(guess * guess - x) < epsilon)
-		return (guess);
-
-	return (squareroot(x));
+	return (squareroot(n, s + 1));
 }
 
 /**
@@ -46,15 +23,8 @@ float squareroot(float x)
  */
 int _sqrt_recursion(int n)
 {
-	float sq;
-
 	if (n < 0)
 		return (-1);
 
-	sq = squareroot((float)n);
-
-	if ((int)sq * (int)sq != n)
-		return (-1);
-
-	return ((int)sq);
+	return (squareroot(n, 0));
 }
