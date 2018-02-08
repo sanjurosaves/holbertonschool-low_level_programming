@@ -18,7 +18,7 @@ int isPrime(int x, int n)
 }
 
 /**
- * _is_prime_number - checks if integer is prime
+ * is_prime_number - checks if integer is prime
  * @n: number
  * Return: 1 if prime; 0 if not prime
  */
