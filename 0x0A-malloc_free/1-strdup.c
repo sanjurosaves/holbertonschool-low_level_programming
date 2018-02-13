@@ -2,21 +2,6 @@
 #include <stdlib.h>
 
 /**
- * _strlen - counts characters in a string
- * @s: string
- * Return: string length
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-
-	return (i);
-}
-
-/**
  * _strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter
  * @str: pointer to string
@@ -25,15 +10,18 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	int i;
-	int len = _strlen(str);
+	int len;
 	char *new;
 
 	if (*str == 0 || *str == '\0' || str == NULL)
 		return (0);
 
+	for (len = 0; str[len] != '\0'; len++)
+		;
+
 	new = malloc(sizeof(char) * len);
-	if (new == 0)
-		return (0);
+	if (new == NULL)
+		return (NULL);
 
 	for (i = 0; i < len; i++)
 		new[i] = str[i];
