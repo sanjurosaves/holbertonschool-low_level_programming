@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 
 	charcount += ac;
 
-	arr = malloc(charcount * sizeof(char));
+	arr = malloc((charcount + 1) * sizeof(char));
 	if (arr == NULL)
 		return (NULL);
 
@@ -42,6 +42,7 @@ char *argstostr(int ac, char **av)
 		}
 
 	}
+	arr[k++] = '\0';
 
 	return (arr);
 }
