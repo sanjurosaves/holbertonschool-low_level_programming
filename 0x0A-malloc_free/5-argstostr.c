@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * argstostr - concatenates all arguments of program
@@ -15,7 +14,7 @@ char *argstostr(int ac, char **av)
 	int charcount = 0;
 	char *arr;
 
-	if ((ac == 0) || (av == NULL))
+	if ((ac == 0) || (av == NULL) || (ac == 1))
 		return (0);
 
 	for (i = 1; i < ac; i++)
