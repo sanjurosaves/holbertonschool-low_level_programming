@@ -1,6 +1,12 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+/**
+ * _calloc - allocates memory for an array
+ * @size: data type size per element
+ * @nmemb: number of elements
+ * Return: pointer to allocated memory or 0 on errors or bad input
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *vp;
