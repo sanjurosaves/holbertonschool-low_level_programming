@@ -1,60 +1,44 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
- * _strlen - counts characters in a string
- * @s: string
- * Return: string length
- */
-unsigned int _strlen(char *s)
-{
-	unsigned int i;
-
-	if (s == NULL || *s == '\0' || s == 0)
-		i = 0;
-
-	else
-	{
-		for (i = 1; s[i] != '\0'; i++)
-			;
-	}
-
-	return (i);
-}
-
-/**
- * string_nconcat - concatenates two strings
+ * string_nconcat - concatenates two string
+ * @n: max length of s2
  * @s2: string 2
  * @s1: string 1
- * @n: max length of s2 in new string
- * Return: pointer to new concatenated string
+ * Return: pointer to new space in memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j;
-	unsigned int len1 = _strlen(s1);
-	unsigned int len2;
 	char *new;
+	unsigned int l1, l2, i, j;
 
-	if (_strlen(s2) > n)
-		len2 = n;
-	else
-		len2 = _strlen(s2);
+	if (s1 == NULL)
+		s1 = "";
 
-	new = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (s2 == NULL)
+		s2 = "";
+
+	for (l1 = 0; s1[l1] != '\0'; l1++)
+		;
+
+	for (l2 = 0; s2[l2] != '\0'; l2++)
+		;
+
+	if (n < l2)
+		l2 = n;
+
+	new = malloc(sizeof(char) * (l1 + l2 + 1));
 	if (new == 0)
-		return (0);
+		return (NULL);
 
-	printf("%lu\n", sizeof(char) * (len1 + len2 + 1));
-
-	for (i = 0; i < (len1); i++)
+	for (i = 0; i < l1; i++)
 		new[i] = s1[i];
 
-	for (j = 0 ; i < (len1 + len2); i++, j++)
+	for (j = 0; i < (l1 + l2); i++, j++)
 		new[i] = s2[j];
 
-	new[len1 + len2 + 1] = '\0';
+	new[l1 + l2 + 1] = '\0';
 
 	return (new);
 }
