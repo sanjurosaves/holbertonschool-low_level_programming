@@ -1,3 +1,7 @@
+#ifndef NULL
+#define NULL 0
+#endif
+
 #ifndef DOG_H_
 #define DOG_H_
 
