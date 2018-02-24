@@ -69,7 +69,6 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-/*			getchar(); printf("i = %d, j = %d\n", i, j);*/
 			if (format[i] == *type[j].a)
 			{
 				printf("%s", sep);
@@ -81,7 +80,8 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
+	va_end(valist);
+
 	printf("\n");
 
-	va_end(valist);
 }
