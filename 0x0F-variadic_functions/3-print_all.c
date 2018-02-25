@@ -62,9 +62,10 @@ void print_all(const char * const format, ...)
 	};
 	unsigned int i = 0, j;
 	char *sep = "";
+	char *postsep = ", ";
 
 	va_start(valist, format);
-	while (format[i] != '\0' && format != NULL)
+	while ((format != NULL) && (format[i] != '\0'))
 	{
 		j = 0;
 		while (type[j].a != NULL)
@@ -73,7 +74,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", sep);
 				type[j].f(valist);
-				sep = ", ";
+				sep = postsep;
 			}
 			j++;
 		}
