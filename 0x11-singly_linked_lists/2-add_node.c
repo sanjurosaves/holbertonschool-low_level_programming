@@ -5,6 +5,7 @@
  * @str: string literal to be placed in node at head of linked list
  * @head: address of the existing linked list head
  * Return: address of new node, or NULL upon failure
+ */
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *newnode;
