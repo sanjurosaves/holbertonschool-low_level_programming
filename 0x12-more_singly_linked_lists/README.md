@@ -13,3 +13,7 @@ File | Description
 8-sum_listint.c | returns sum of all data in a linked list
 9-insert_nodeint.c | inserts new node at given position
 10-delete_nodeint.c | deletes node at index of linked list
+100-reverse_listint.c | reverses a linked list
+101-print_listint_safe.c | print a linked list (safe)
+102-free_listint_safe.c | frees a linked list (safe)
+103-find_loop.c | finds the loop in a linked list
