@@ -10,7 +10,7 @@ unsigned long int dec_to_bin(unsigned long int n)
 	int remainder;
 	unsigned long int binary = 0, i = 1;
 
-	while(n != 0)
+	while (n != 0)
 	{
 		remainder = n % 2;
 		n = n / 2;
@@ -18,7 +18,7 @@ unsigned long int dec_to_bin(unsigned long int n)
 		i = i * 10;
 	}
 
-	return binary;
+	return (binary);
 }
 
 /**
@@ -29,12 +29,13 @@ unsigned long int dec_to_bin(unsigned long int n)
 unsigned int count_dig(unsigned long int n)
 {
 	int len = 0;
-	while(n != 0)
+
+	while (n != 0)
 	{
 		n /= 10;
 		len++;
 	}
-	return len;
+	return (len);
 }
 
 /**
