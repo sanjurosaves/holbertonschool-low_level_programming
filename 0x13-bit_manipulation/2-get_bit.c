@@ -50,7 +50,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	int masked_n = n & mask;
 	int bit = masked_n >> index;
 
-	if (count_dig(dec_to_bin(n)) < index)
+	if (count_dig(dec_to_bin(n)) + 1 < index)
 		return (-1);
 
 	return (bit);
