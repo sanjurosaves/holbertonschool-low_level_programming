@@ -15,8 +15,8 @@ int main(int argc, char **argv)
 
 	rfd = open(argv[1], O_RDONLY);
 	if (rfd == -1)
-	{ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]); exit(98); }
-
+	{ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+		  argv[1]); exit(98); }
 	wfd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC,
 		   S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (wfd == -1)
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 
 	wclose = close(wfd);
 	if (wclose == -1)
-	{ dprintf(STDERR_FILENO, "Error: Can't close %d\n", wfd); exit(100); }
+	{ dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", wfd); exit(100); }
 
 	return (0);
 }
