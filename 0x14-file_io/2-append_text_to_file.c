@@ -17,17 +17,17 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-	for (len = 0; text_content[len] != '\0'; len++)
-		;
-
 	if (text_content == NULL)
 		;
 	else
 	{
+	for (len = 0; text_content[len] != '\0'; len++)
+		;
+
 	write(fd, text_content, len);
+	}
 
 	close(fd);
-	}
 
 	return (1);
 }
