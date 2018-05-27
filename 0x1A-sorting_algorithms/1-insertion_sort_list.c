@@ -32,7 +32,7 @@ void swap2(listint_t *pointer, listint_t *before)
 	}
 
 	if (before == NULL)
-		printf("value of before: %d", before->n);
+		return;
 }
 
 /**
