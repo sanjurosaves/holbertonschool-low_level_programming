@@ -5,16 +5,13 @@
 def island_perimeter(grid):
     """ determines island perimeter """
     overall_perim = 0
-    y = 0
+    x = 0
 
     for row in grid:
-        for i in range(len(row)):
-            if row[i] == 1:
-                overall_perim += get_cell_perim_val(y, i, grid)
-        y += 1
-
-#    if ((y == 1) or (i == 0)):
-#        overall_perim *= 2
+        for y in range(len(row)):
+            if row[y] == 1:
+                overall_perim += get_cell_perim_val(x, y, grid)
+        x += 1
 
     return overall_perim
 
@@ -22,29 +19,10 @@ def island_perimeter(grid):
 def get_cell_perim_val(row, col, grid):
     """ determines perimeter value of individual cell """
     cpv = 0
+    coordinates = [(row, col-1), (row, col+1), (row-1, col), (row+1, col)]
 
-    try:
-        if (grid[row][col+1] == 0):
+    for e in coordinates:
+        if (grid[e[0]][e[1]] == 0) or ((e[0] < 0) or (e[1] < 0)):
             cpv += 1
-    except:
-        cpv += 1
-
-    try:
-        if (grid[row][col-1] == 0) or ((col-1) < 0):
-            cpv += 1
-    except:
-        cpv += 1
-
-    try:
-        if (grid[(row-1)][col] == 0) or ((row-1) < 0):
-            cpv += 1
-    except:
-        cpv += 1
-
-    try:
-        if (grid[(row+1)][col] == 0):
-            cpv += 1
-    except:
-        cpv += 1
-
+            
     return(cpv)
