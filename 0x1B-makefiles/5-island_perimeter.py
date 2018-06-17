@@ -21,11 +21,12 @@ def get_cell_perim_val(row, col, grid):
     cpv = 0
     coordinates = [(row, col-1), (row, col+1), (row-1, col), (row+1, col)]
 
-    try:
-        for e in coordinates:
+
+    for e in coordinates:
+        try:
             if (grid[e[0]][e[1]] == 0) or ((e[0] < 0) or (e[1] < 0)):
                 cpv += 1
-    except:
+        except:
             cpv += 1
-            
+
     return(cpv)
