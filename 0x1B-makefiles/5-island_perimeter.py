@@ -25,7 +25,7 @@ def get_cell_perim_val(row, col, grid):
         try:
             if (grid[e[0]][e[1]] == 0) or ((e[0] < 0) or (e[1] < 0)):
                 cpv += 1
-        except:
+        except IndexError:
             cpv += 1
 
     return(cpv)
