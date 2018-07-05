@@ -1,7 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * _pow_recursion - retruns the values of x to the y power
+ * _pow_recursion - retruns the values of x to the y power for
+ * non-negative co-efficients
  * @y: power
  * @x: base
  * Return: exponential expansion, unless y < 0, in which case -1 for error
@@ -79,7 +80,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	if (!tree->left || !tree->right)
+	if ((!tree->left && tree->right) || (tree->left && !tree->right))
 		return (0);
 
 	c = binary_tree_nodes(tree);
