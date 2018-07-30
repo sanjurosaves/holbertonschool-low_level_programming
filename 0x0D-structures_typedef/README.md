@@ -1,6 +1,6 @@
 0x0D. C - Structures, typedef
 
-File - Description
+File | Description
 ---|---
 dog.h | defines new type "struct dog", later defines new type "dog_t"
 1-init_dog.c | initializes a variable of type dog
