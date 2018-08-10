@@ -9,10 +9,12 @@
  * Return: index of matching value, if no match return -1
  */
 int jump_search(int *array, size_t size, int value)
-/* L == array, n == size, s == value */
 {
 	unsigned int a = 0;
 	float b = sqrt(size);
+
+	if (array == NULL)
+		return (-1);
 
 	while (array[a] < value)
 	{
